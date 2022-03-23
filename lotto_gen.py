@@ -1,4 +1,3 @@
-from multiprocessing import log_to_stderr
 import random
 
 # ロト6の番号を出す関数設定
