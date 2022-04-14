@@ -17,7 +17,7 @@ time.sleep(1)
 raw_win_num = driver.find_elements_by_class_name('js-lottery-number-pc')
 win_num = list()
 
-for i in raw_win_num:
+for i in raw_win_num[:6]:
     i = i.text
     i = int(i)
     win_num.append(i)
@@ -183,7 +183,6 @@ elif total_cost == total_win_value:
 else:
     print('損しました！残念です。')
 
-# 結果ファイルを作成
 print()
 file = input('結果をファイルに保存しましょうか？(Y / N)')
 
