@@ -37,23 +37,54 @@ fifth_value = 0
 raw_value = driver.find_elements_by_class_name('alnRight')
 
 for i in raw_value:
-    raw_a = raw_value[raw_value.index(i)].text
-    a = raw_a.replace('円', '')
+    a = raw_value[raw_value.index(i)].text
+    a = a.replace('円', '')
     a = a.replace(',', '')
-    
     if i == raw_value[1]:
+        if a == '該当なし':
+            a = raw_value[13].text
+            a = a.replace('円', '')
+            a = a.replace(',', '')
+        if a == '該当なし':
+            a = raw_value[24].text
+            a = a.replace('円', '')
+            a = a.replace(',', '')
+        if a == '該当なし':
+            a = raw_value[37].text
+            a = a.replace('円', '')
+            a = a.replace(',', '')
+        if a == '該当なし':
+            a = raw_value[49].text
+            a = a.replace('円', '')
+            a = a.replace(',', '')
         a = int(a)
         first_value = a
     elif i == raw_value[3]:
+        if a == '該当なし':
+            a = raw_value[15].text
+            a = a.replace('円', '')
+            a = a.replace(',', '')
         a = int(a)
         second_value = a
     elif i == raw_value[5]:
+        if a == '該当なし':
+            a = raw_value[17].text
+            a = a.replace('円', '')
+            a = a.replace(',', '')
         a = int(a)
         third_value = a
     elif i == raw_value[7]:
+        if a == '該当なし':
+            a = raw_value[19].text
+            a = a.replace('円', '')
+            a = a.replace(',', '')
         a = int(a)
         fourth_value = a
     elif i == raw_value[9]:
+        if a == '該当なし':
+            a = raw_value[21].text
+            a = a.replace('円', '')
+            a = a.replace(',', '')
         a = int(a)
         fifth_value = a
 
